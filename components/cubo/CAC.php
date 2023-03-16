@@ -1,7 +1,7 @@
 <?php
 
         if (isset($_GET['btn_calc'])) {
-            
+            echo $_GET;
             $val1 = $_GET['val1'];
             $val2 = $_GET['val2'];
             
@@ -14,7 +14,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href=".\CSS\style.css">
+    <link rel="stylesheet" href="/CSS/style.css">
 </head>
 <body>
 
