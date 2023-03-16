@@ -1,0 +1,28 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.CAC form {
+    /* display: flex; */
+    text-align: center;
+    justify-content: center;
+    margin: 0 auto;
+    
+}
+
+.CAC form input {
+    margin: 10px;
+    width: 25%;
+}
+
+.CAC {
+    background-color: #f8f9facb;
+}
+
+h1 {
+    text-align: center;
+}
+
