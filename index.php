@@ -15,7 +15,7 @@
 </head>
 
 <body>
-  <form class="navbar navbar-expand-lg navbar-light bg-light" method="get">
+  <div class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
       <a class="navbar-brand" href="#" id="span">Cálculos</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -29,7 +29,7 @@
               Cubo
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <li><button class="dropdown-item" name="areaC" id="btn_area_cubo">Área</button></li>
+              <li><a href="/cubo/area" class="dropdown-item">Área</a></li>              
               <li><button class="dropdown-item" name="volumeC">Volume</button></li>
             </ul>
           </li>
@@ -51,33 +51,49 @@
         </ul>
       </div>
     </div>
-  </form>
+  </div>
 
   <?php
 
-    if (isset($_GET['btn_calc'])) {
-      require_once "./components/cubo/CAC.php";
-    }
+    $url =  explode('/', $_SERVER['REDIRECT_URL']);
+  
+    if($url[1] == 'cubo'){
+      if($url[2] == 'area'){
+          require_once './components/cubo/CAC.php';
+      }
+      elseif($url[2] == 'volume'){
 
-    elseif(isset($_GET['areaC'])){
-      require_once "./components/cubo/CAC.php";
-    }
+      }
+      else{
 
-    elseif(isset($_GET['volumeC'])){
-      require_once "./components/cubo/CVC.php";
+      }
     }
+    elseif($url[1] == 'esfera'){
 
-    elseif(isset($_GET['areaE'])){
-      require_once "./components/esfera/CAE.php";
     }
+    // if (isset($_GET['btn_calc'])) {
+    //   require_once "./components/cubo/CAC.php";
+    // }
 
-    elseif(isset($_GET['volumeC'])){
-      require_once "./components/esfera/CVE.php";
-    }
+    // elseif(isset($_GET['areaC'])){
+    //   require_once "./components/cubo/CAC.php";
+    // }
 
-    elseif(isset($_GET['IMC'])){
-      require_once "./components/imc.php";
-    };
+    // elseif(isset($_GET['volumeC'])){
+    //   require_once "./components/cubo/CVC.php";
+    // }
+
+    // elseif(isset($_GET['areaE'])){
+    //   require_once "./components/esfera/CAE.php";
+    // }
+
+    // elseif(isset($_GET['volumeC'])){
+    //   require_once "./components/esfera/CVE.php";
+    // }
+
+    // elseif(isset($_GET['IMC'])){
+    //   require_once "./components/imc.php";
+    // };
 
   ?>
 
