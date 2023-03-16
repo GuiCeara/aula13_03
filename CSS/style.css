@@ -13,9 +13,21 @@ body {
     
 }
 
-.CAC form input {
+.CAC form .inputs {
     margin: 10px;
     width: 25%;
+}
+
+.CAC form button {
+    border: none;
+    margin: 10px;
+    background-color: coral;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.CAC form button:hover {
+    background-color: rgb(248, 103, 50);
 }
 
 .CAC {

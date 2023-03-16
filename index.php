@@ -11,15 +11,6 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-    <style>
-
-      .nav-link{
-        border: none;
-        background-color: '#F8F9FA';
-      }
-
-    </style>
-
   <title>Aula 13/03</title>
 </head>
 
@@ -63,24 +54,28 @@
   </form>
 
   <?php
-  
-    if(isset($_GET['areaC'])){
+
+    if (isset($_GET['btn_calc'])) {
       require_once "./components/cubo/CAC.php";
-    };
+    }
 
-    if(isset($_GET['volumeC'])){
+    elseif(isset($_GET['areaC'])){
+      require_once "./components/cubo/CAC.php";
+    }
+
+    elseif(isset($_GET['volumeC'])){
       require_once "./components/cubo/CVC.php";
-    };
+    }
 
-    if(isset($_GET['areaE'])){
+    elseif(isset($_GET['areaE'])){
       require_once "./components/esfera/CAE.php";
-    };
+    }
 
-    if(isset($_GET['volumeC'])){
+    elseif(isset($_GET['volumeC'])){
       require_once "./components/esfera/CVE.php";
-    };
+    }
 
-    if(isset($_GET['IMC'])){
+    elseif(isset($_GET['IMC'])){
       require_once "./components/imc.php";
     };
 
