@@ -22,6 +22,7 @@
     margin: 10px;
     background-color: #ff7f50;
     padding: 8px;
+    border: 2px solid black;
     border-radius: 15px;
     font-weight: bold;
 }

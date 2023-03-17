@@ -23,10 +23,15 @@
 
 <!DOCTYPE html>
 <html lang="pt-br">
+
+<head>
+    <link rel="stylesheet" href="/CSS/style.css">
+</head>
+
 <body>
 
     <div class="container CAC">
-        <h1>Calcular Área do Cubo</h1>
+        <h1>Calcular Área de um Cubo</h1>
         <form method="get">
             <input type="number" name="val1" class="inputs" placeholder="Altura (cm): ">
             <br>

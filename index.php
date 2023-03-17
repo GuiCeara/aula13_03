@@ -39,8 +39,8 @@
             Esfera
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="/esfera/area">Área</a></li>
+            <li><a class="dropdown-item" href="/esfera/volume">Volume</a></li>
           </ul>
         </li>
         <li class="nav-item">

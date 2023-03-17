@@ -1,10 +1,10 @@
 <?php
 
     $url = explode("?", $_SERVER['REQUEST_URI']);
-    @$url = explode("&", $url[1]);
+    @$dados = explode("&", $url[1]);
     $GET = [];
     
-    foreach ($url as $value) {
+    foreach ($dados as $value) {
         $x = explode("=", $value);
         @$GET[$x[0]] = floatval($x[1]);
     };
@@ -26,7 +26,7 @@
 <body>
 
     <div class="container CAC">
-        <h1>Calcular Volume do Cubo</h1>
+        <h1>Calcular Volume de um Cubo</h1>
         <form method="get">
             <input type="number" name="val1" class="inputs" placeholder="Comprimeto (cm): ">
             <br>
