@@ -1,19 +1,18 @@
 <?php
 
     $url = explode("?", $_SERVER['REQUEST_URI']);
-    $dados = explode("&", $url[1]);
+    @$dados = explode("&", $url[1]);
     $GET = [];
     $PI = 3.14;
 
     foreach ($dados as $value) {
         $x = explode("=", $value);
-        $GET[$x[0]] = floatval($x[1]);
+        @$GET[$x[0]] = floatval($x[1]);
     };
     
-    if (isset($GET´['btn_calc'])) {
+    if (isset($GET['btn_calc'])) {
         $raio = $GET['val1'];
-        $area = 4*$PI*$raio**2;
-        
+        $area = 4 * $PI * $raio ** 2;
     };
 
 ?>
