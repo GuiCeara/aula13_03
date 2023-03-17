@@ -1,21 +1,20 @@
 <?php
 
     // var_dump($_SERVER['REQUEST_URI']);
-
-    $url = explode("?", $_SERVER['REQUEST_URI']);
+    $url = explode("?",$_SERVER['REQUEST_URI']);
     // var_dump($url[1]);
-    $dados = explode("&", $url[1]); 
-    $result = ["x"=>10];
-
+    @$dados = explode("&", $url[1]); 
+    $result = [];
     
     foreach ($dados as $value) {
         $x = explode("=",$value);
-        $result[$x[0]] = floatval($x[1]);
+        @$GET[$x[0]] = floatval($x[1]);
+        // var_dump($GET);
     }
 
-    if (isset($result['btn_calc'])) {
-        $val1 = $result['val1'];
-        $val2 = $result['val2'];
+    if (isset($GET['btn_calc'])) {
+        $val1 = $GET['val1'];
+        $val2 = $GET['val2'];
         
         $area = ($val1 * $val2)*6;
     }
@@ -23,29 +22,22 @@
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <link rel="stylesheet" href="/CSS/style.css">
-</head>
+<html lang="pt-br">
 <body>
 
     <div class="container CAC">
         <h1>Calcular Área do Cubo</h1>
         <form method="get">
-            <input type="number" name="val1" class="inputs" placeholder="Altura: ">
+            <input type="number" name="val1" class="inputs" placeholder="Altura (cm): ">
             <br>
-            <input type="number" name="val2" class="inputs" placeholder="Largura: ">
+            <input type="number" name="val2" class="inputs" placeholder="Largura (cm): ">
             <br>
-            <input type="text" disabled  id="span" value="<?php echo 'Resultado: ', isset($area)? $area:''; ?>" placeholder="Resultado:">
+            <input type="text" disabled  id="span" value='<?php echo "Resultado: ", isset($area)? $area.' cm³':'0 cm³'; ?>'>
             <br>
             <button name="btn_calc">Calcular</button>
         </form>
         
-    </div>
-    
-    <!-- <img src=".\imagens\esfera.jpg" class="img_esfera">  -->
-
-    
+    </div>     
 
 </body>
 </html>

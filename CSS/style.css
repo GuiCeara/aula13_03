@@ -10,7 +10,6 @@
     text-align: center;
     justify-content: center;
     margin: 0 auto;
-    
 }
 
 .CAC form .inputs {
@@ -21,8 +20,9 @@
 .CAC form button {
     border: none;
     margin: 10px;
-    background-color: coral;
-    border-radius: 10px;
+    background-color: #ff7f50;
+    padding: 8px;
+    border-radius: 15px;
     font-weight: bold;
 }
 
