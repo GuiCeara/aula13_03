@@ -13,5 +13,33 @@
         <p>PAGE NOT FOUND.</p>
     </div>
 
+    <script>
+
+        function verificar(span) {
+
+            if (span < 18.5) {
+                result_calc_1.classList.add("active")
+            }
+
+            else if (span < 18.5 && 24.9) {
+                result_calc_2.classList.add("active")
+            }
+
+            else if (span < 25.0 && 29.9) {
+                result_calc_3.classList.add("active")
+            }
+
+            else if (span < 30.0 && 39.9) {
+                result_calc_4.classList.add("active")
+            }
+
+            else {
+                result_calc_5.classList.add("active")
+            }
+
+        }
+
+    </script>
+
 </body>
 </html>

@@ -39,3 +39,37 @@ h1 {
     text-align: center;
 }
 
+
+.tabelaIMC {
+    display: flex;
+}
+
+.tabelaIMC table {
+    margin: 0 auto;
+    display: flex;
+    font-size: 15px;
+}
+
+.tabelaIMC table .span{
+    background-color: #ff7f50;
+    color: white;
+    border: 0.5px solid black;
+}
+
+.tabelaIMC table .center {
+    text-align: center;
+}
+
+.tabelaIMC table td {
+    padding: 10px;
+    border-bottom: 0.1px solid rgb(109, 106, 106);
+}
+
+.tabelaIMC table .active {
+    background-color: #EBFDEA;
+}
+
+
+
+
+

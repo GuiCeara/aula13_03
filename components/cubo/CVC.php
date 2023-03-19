@@ -34,7 +34,7 @@
             <br>
             <input type="number" name="val3" class="inputs" placeholder="Altura (cm): ">
             <br>
-            <input type="text" disabled  id="span" value='<?php echo "Resultado: ", isset($volume)? $volume.' cm³':'0 cm³'; ?>'>
+            <input type="text" disabled  id="span" value='<?php echo "Resultado: ", isset($volume)? $volume.' cm³':'0 cm²'; ?>'>
             <br>
             <button name="btn_calc">Calcular</button>
         </form>
