@@ -3,22 +3,12 @@
     $url = explode("?", $_SERVER['REQUEST_URI']);
     @$dados = explode("&",$url[1]);
     $GET = [];
-
+    
     foreach ($dados as $value) {
         $x = explode("=", $value);
-        
-        @$y = str_replace("%", ".", $x[1]);
-        $y = str_replace("C", "", $y);
-        if (substr($y, -3, 1) == '2') {
-            $y = str_replace(substr($y, -3, 1), "", $y);
-            # arrumar a varivael ($y)
-            @$GET[$x[0]] = floatval($y);
-            
-        } else {
-            @$GET[$x[0]] = floatval($x[1]);
-        }
-        
-        
+        $y = urldecode(@$x[1]);
+        $GET[$x[0]] = floatval(str_replace(',', '.', $y ));
+        // var_dump($GET);
     };
 
     if (isset($GET['btn_calc'])) {
@@ -151,15 +141,15 @@
             result_calc_1.classList.add("active")
         }
 
-        else if (span > 18.5 && 24.9) {
+        else if (span > 18.5 && span < 24.9) {
             result_calc_2.classList.add("active")
         }
 
-        else if (span > 25.0 && 29.9) {
+        else if (span > 25.0 && span < 29.9) {
             result_calc_3.classList.add("active")
         }
 
-        else if (span > 30.0 && 39.9) {
+        else if (span > 30.0 && span < 39.9) {
             result_calc_4.classList.add("active")
         }
 
