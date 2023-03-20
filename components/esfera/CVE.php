@@ -6,18 +6,14 @@
 
     foreach ($dados as $value) {
         $x = explode("=", $value);
-        @$GET[$x[0]] = floatval($x[1]);
+        $GET[$x[0]] = floatval(@$x[1]);
     }
 
     if (isset($GET['btn_calc'])) {
         $raio = $GET['val1'];
         $volume = (4/3)*$PI*$raio**3;
+        var_dump($volume);
     }
-    
-
-
-
-
 ?>
 
 <!DOCTYPE html>
