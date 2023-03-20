@@ -12,7 +12,6 @@
     if (isset($GET['btn_calc'])) {
         $raio = $GET['val1'];
         $volume = (4/3)*$PI*$raio**3;
-        var_dump($volume);
     }
 ?>
 
@@ -25,7 +24,7 @@
         <form method="get">
             <input type="number" name="val1" class="inputs" placeholder="Raio (cm): ">
             <br>
-            <input type="text" disabled  id="span" value='<?php echo "Resultado: ", isset($volume)? number_format($volume, 2).' cm³':'0 cm²'; ?>'>
+            <input type="text" disabled  id="span" value='<?php echo "Resultado: ", isset($volume)? $volume.' cm³':'0 cm²'; ?>'>
             <br>
             <button name="btn_calc">Calcular</button>
         </form>
