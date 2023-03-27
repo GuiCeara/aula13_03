@@ -15,21 +15,14 @@
     }
 ?>
 
-<!DOCTYPE html>
-<html lang="pt-br">
-<body>
-
-    <div class="container CAC">
-        <h1>Calcular Volume de uma Esfera</h1>
-        <form method="get">
-            <input type="number" name="val1" class="inputs" placeholder="Raio (cm): ">
-            <br>
-            <input type="text" disabled  id="span" value='<?php echo "Resultado: ", isset($volume)? $volume.' cm³':'0 cm²'; ?>'>
-            <br>
-            <button name="btn_calc">Calcular</button>
-        </form>
-        
-    </div>     
-
-</body>
-</html>
+<div class="container CAC">
+    <h1>Calcular Volume de uma Esfera</h1>
+    <form method="get">
+        <input type="number" name="val1" class="inputs" placeholder="Raio (cm): ">
+        <br>
+        <input type="text" disabled  id="span" value='<?php echo "Resultado: ", isset($volume)? $volume.' cm³':'0 cm²'; ?>'>
+        <br>
+        <button name="btn_calc">Calcular</button>
+    </form>
+    
+</div>     
